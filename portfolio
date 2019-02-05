@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head></head>
+<style>
+    
+    body{background-image: url("https://www.wallpapersbrowse.com/images/zi/zieohlp.jpg");
+        background-repeat: no-repeat;
+        
+    }
+    #title{
+          position: absolute;
+        border: 2px solid blue;
+    font-size: 5em;
+    height:auto;
+    width:auto;
+    border-radius: 2px;
+    top: 5px;
+    left: 100px;
+    color:silver;
+        
+    }
+        
+     
+#info{
+    position: absolute;
+    color: darkorange;
+font-weight: bold;
+    top:200px;
+        left: 20px;
+    border: 2px solid lightblue;
+        text-align: left;
+    font-size: 1.3em;
+    width: auto;
+    height: auto;
+    }
+    #bakugan{position: absolute;
+        background-image: url(https://images-na.ssl-images-amazon.com/images/I/31OiFb3NV3L.jpg);
+       
+        width: 20%;
+        height: 20%;
+         border: 4px solid lightblue;
+     border-radius: 50%;
+        
+        top: 400px;
+        left 30px;
+        background-repeat: no-repeat;
+    }
+    #halo4{
+        position: absolute;
+        background-image: url("https://oyster.ignimgs.com/mediawiki/apis.ign.com/halo-4/8/83/Halo_4_art_top.jpg?width=640");
+        top: 400px;
+        left: 290px;
+        height: 348px;
+        width: 640px;
+            
+        background-repeat: no-repeat;
+        border: 4px solid lightblue;
+        
+        
+        
+        
+    }
+    #movie{position: absolute;
+        border: 4px solid lightblue;
+        top:400px;
+        left: 950px;
+        
+    }
+</style>
+<body>
+<div id="title">Ryan Bailey's Page</div>    
+<div id="info">Hi! My name is Ryan bailey. I am a junior here at NKU majoring in Media Inormatics. My hobbies include playing video games, reading, collecting Bakugan, studying astronomy, studying some of the latest technology, and drawing from time to time. </div>
+<div id="bakugan"></div>    
+<div id="halo4"></div>
+<div id="movie">
+<iframe width="420" height="320"
+ src="https://www.youtube.com/embed/OxhMYk_xljQ?controls=0"></iframe>    
+    </div>    
+</body>
+</html>
