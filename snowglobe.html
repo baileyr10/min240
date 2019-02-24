@@ -1,0 +1,96 @@
+<!doctpe html>
+<html>
+<style>
+#stage{ 
+position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    background-image: radial-gradient(white20%, transparent 0);
+    background-size: 30px 30px;
+}
+    
+    #globe{
+        position: absolute;
+        top: 10vh;
+        width: 80vh;
+        border: 10px solid hsla(0, 100%, 100%, .7);
+        border-radius: 50%;
+        background-color: hsla(0, 100%, 100%, .5);
+        
+    }
+    
+    #tree{
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        height: 40%;
+        width: 20%;
+        background-color: green;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+	animation:turnleft linear infinite;
+        
+    }
+	@keyframes turnleft:    	
+
+    #tree2{
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        height: 40%;
+        width: 20%;
+        background-color: green;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        
+    }
+    
+    #tree3{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        height: 40%;
+        width: 20%;
+        background-color: green;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%)
+	animation: turnright linear infinite;
+        
+    }
+     #present
+    {
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        width: 10%;
+        height: 10%;
+        border-radius: 5%
+        background-color: red;
+        filter:drop-shadow(2px 2px 10px black);
+    }
+	present.hover{background-color: darkgreen;}
+
+ 
+
+#present2 {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        width: 10%;
+        height: 40%;
+        border-radius: 5%
+        background-color: lightgreen;
+        filter:drop-shadow(2px 2px 10px black);
+    }
+present2.hover{background-color: darkred;}    
+</style>
+<body>
+<div id="stage"></div>
+<div id="globe"></div>
+<div id="tree"></div>
+<div id="tree2"></div>
+<div id="tree3"></div>
+<div id="present"></div>
+<div id="present2"></div>
+</body>
+</html>
