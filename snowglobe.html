@@ -1,96 +1,149 @@
-<!doctpe html>
 <html>
+<head>
+</head>
 <style>
-#stage{ 
-position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: lightblue;
-    background-image: radial-gradient(white20%, transparent 0);
-    background-size: 30px 30px;
-}
+
+    #background {
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: lightblue;
+        background-image: radial-gradient(white 20%, transparent 0);
+        background-size: 30px 30px;    
+    }
     
     #globe{
         position: absolute;
         top: 10vh;
+        left: 10vh;
         width: 80vh;
+        height: 80vh;
         border: 10px solid hsla(0, 100%, 100%, .7);
         border-radius: 50%;
         background-color: hsla(0, 100%, 100%, .5);
-        
+        overflow: hidden;
     }
-    
-    #tree{
+     #tree {
         position: absolute;
         top: 50%;
         left: 0%;
-        height: 40%;
         width: 20%;
+        height: 40%;
         background-color: green;
-        clip-path: polygon(50% 0, 100% 100%, 0 100%);
-	animation:turnleft linear infinite;
-        
+        clip-path: polygon(50% 0,100% 100%,0 100%);
     }
-	@keyframes turnleft:    	
-
-    #tree2{
+    #tree2 {
         position: absolute;
         top: 50%;
         left: 30%;
-        height: 40%;
         width: 20%;
+        height: 40%;
         background-color: green;
-        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        clip-path: polygon(50% 0,100% 100%,0 100%);
+        animation: turn linear infinite 4s;
         
     }
-    
-    #tree3{
+    @keyframes turn{
+        0%{transform: rotateY(0deg);}
+        50%{transform: rotateY(180deg);
+            0%{transform: rotateYrotateY(0deg);}}}
+    #tree3 {
         position: absolute;
         top: 50%;
-        left: 60%;
-        height: 40%;
+        left: 56%;
         width: 20%;
+        height: 40%;
         background-color: green;
-        clip-path: polygon(50% 0, 100% 100%, 0 100%)
-	animation: turnright linear infinite;
-        
+        clip-path: polygon(50% 0,100% 100%,0 100%);
+        filter:drop-shadow(2px 2px 10px black);
+        animation: turnaround linear infinite 5s;    
     }
-     #present
+    @keyframes turnaround{
+        0%{transform: rotateY(0deg);}
+        50%{transform: rotateY(-180deg);
+            0%{transform: rotateYrotateY(0deg);}}}
+    #ground{
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background-color: white;
+            
+    }
+    #present
     {
         position: absolute;
         top: 80%;
         left: 30%;
         width: 10%;
         height: 10%;
-        border-radius: 5%
+        border-radius: 20%;
         background-color: red;
         filter:drop-shadow(2px 2px 10px black);
     }
-	present.hover{background-color: darkgreen;}
-
- 
-
-#present2 {
+    #present:hover{background-color:limegreen;}
+    
+    #present2
+    {
         position: absolute;
-        top: 80%;
-        left: 50%;
+        top: 67%;
+        left: 18%;
         width: 10%;
-        height: 40%;
-        border-radius: 5%
+        height: 23%;
+        border-radius: 20%;
         background-color: lightgreen;
         filter:drop-shadow(2px 2px 10px black);
     }
-present2.hover{background-color: darkred;}    
-</style>
+    #present2:hover{background-color: darkred;}
+    #home {
+        position: absolute;
+            top: 70%;
+            left: 70%;
+        width:20%;
+        height: 20%;    
+        background-color:sandybrown;
+        overflow: hidden;
+       filter:drop-shadow(2px 2px 10px black);
+        
+        
+    }
+    #roof{
+        
+      position: absolute;
+            top: 55.2%;
+            left: 70%;
+        width:20%;
+        height: 15%;    
+        background-color:navy;
+        overflow: hidden;
+        clip-path: polygon(50% 0,100% 100%,0 100%);
+        filter:drop-shadow(2px 2px 10px black);
+    }
+    #roof:hover{background-color: white;}
+    #door{
+        position: absolute;
+        left:73%;
+        top:80%;
+        width: 4%;
+        height:10%;
+        background-color: saddlebrown;
+        }
+    </style>
 <body>
-<div id="stage"></div>
-<div id="globe"></div>
-<div id="tree"></div>
-<div id="tree2"></div>
-<div id="tree3"></div>
-<div id="present"></div>
-<div id="present2"></div>
+    <div id="background"></div>
+    <div id="globe">
+    <div id="tree"></div>
+        <div id="tree2"></div>
+        <div id="tree3"></div>
+        <div id="ground"></div>
+        <div id="present"></div>
+        <div id="present2"></div>
+        <div id="home"></div>
+        <div id="roof"></div>
+        <div id="door"></div>
+    </div>
 </body>
 </html>
