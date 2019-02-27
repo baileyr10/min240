@@ -11,7 +11,7 @@
         background-size: cover;
         transform-origin: 60% 0;
         background-image: url("https://previews.123rf.com/images/kathygold/kathygold1009/kathygold100900068/7730727-african-american-ballerina-silhouette-on-a-white-background.jpg");
-        animation: turn 2s ease-out 0s 1, turn 0.5s linear 0s 10, turn 2s ease-in 0s 1, fadeoutin 1s linear 0s 1;
+        animation: turn 2s ease-out 0s 1, turn 0.5s linear 0s 10, turn 2s ease-in 0s 1, fade_out_in 1s;
         animation-duration: infinite;   
         
         
@@ -23,7 +23,7 @@
         50%{transform: rotateY(180deg);}
             0%{transform: rotateY(0deg);}}
     }
-      @keyframes fadeoutin{
+      @keyframes fade_out_in{
           0%{opacity: 1;}
           50%{opacity: 0;}
             100%{opacity: 1;}
