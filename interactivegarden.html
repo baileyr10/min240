@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+    
+<head></head>
+<style>    
+    
+    
+    #start{position: absolute;
+    height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        top: 75%;
+        left: 15%;
+    }
+     #back{position: absolute;
+    height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+         top: 5%;
+         display: none;
+        
+    }
+    #reset{position: absolute;
+    height: 45px;
+        width: 115px;
+        font-size: 25px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        left:85%;
+        top:5%;
+    }
+        #workflow{position: absolute;
+    height: 45px;
+        width: 115px;
+        font-size: 25px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        top: 75%;
+            left: 75%;
+    }
+    #workflowscreen{position: absolute;
+    background-image: url(https://lh3.googleusercontent.com/5U2cMGKbEe28cnPSldfewJRKcPGeJ3WMqhRifjFLWtEzICDYvcFZNZYJg4TGc2L2erjpuKmhIn6jAJyOLAzAql3uP-riq36LXrDdDuSIc_dmVfbSvcxgj-co5yO3RAZC1L2e3mNRKkPb15Vr0dllDQmE7lVJAzo0o1S_cvAmL5fLIbIH_7W2mcl4c7INRRUJglMzUKdLiV5Axqwvy3sR5Gx-shijb19ni1cj5qqF9Xh1LxZcJCYEkBipAAtImOLjL_kKekXnr9j_IOgudoIB1V7nxPas_MILw9F4AQdBPHdyPSSV3kXpsOQA22Assmnx-ZKj55N8mpZJSAzPhREJWU4sTCj0tQoK4pX4DGmtxLwBx7k6m_KONoxDZf63MP7xRMppUZTSHtsPrtMs7yZmH3lpzge4oqGk0B_57ER75wvif72RVHUvlG1UYQZa1G-EcdL4ZOnf8GTB9EhgTAPvwD4HEpo6BV-keOgTAiU6ahVaxQ3mgOud-seTBuivfy9K7Qhq2b0tGOcYRc4BsDsIALLq2jwpIyjuxAsNZBCgYki9o3HexPLERzaQsKK5ywnVmM76RlrNhvzkm4tAZsNhBxUNvg9XuKoe-IPdeBLfVweHFS65kfjzDX3h3-55GI7TPZNKIVEMTT1yeD2YmjAyJh62jLw9K4g=w1279-h410-no);
+    display: none;
+    background-repeat: no-repeat;    
+    height: 100%;
+    width: 100%;}
+    
+    #infoscreen{
+        position: absolute;
+        background-color:forestgreen;
+        color:white;
+        text-align: center;
+        font-size: 60px;
+        display: block;
+        width: 80%;
+        height: 50%;
+            
+    }
+    #gardenscreen{
+        background-image: url(https://www.willseye.org/wp-content/uploads/2017/08/green-grass-blue-sky-1472573965Vki.jpg);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 50%;
+        width: 80%;
+        display: none;
+        
+            
+        
+        
+    }
+    
+    #garden{position: absolute;
+        background-color:green;
+        height: 30vh;
+            width:80vw;
+        top:78%;
+    }
+    
+    
+    #blue{ position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10vmin;
+        height: 10vmin;
+        background-color: blue;
+        
+    }
+    
+    #trunk{ position: absolute;
+        top: 70%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        width: 10vmin;
+        height: 20vmin;
+        background-color: saddlebrown;
+        
+    }
+    
+    </style>    
+    <body>
+    <div id="infoscreen">Click on the blue square to make the tree trunk grow taller. Click restart to return back to this screen and reset its size.
+    <div id="start">Start</div>
+    <div id="workflow">Workflow</div>
+    </div>    
+    <div id="gardenscreen">    
+    <div id="blue"></div>
+    <div id="trunk"></div>
+    <div id="garden"></div> 
+        
+         <div id="reset">Reset</div>
+    </div>
+    <div id="workflowscreen"></div>
+        <div id="back">Back</div>
+<script>
+    var myInfo = document.querySelector("#infoscreen")
+    var myGarden = document.querySelector("#gardenscreen")
+    var myBlue = document.querySelector("#blue");
+    var myTree = document.querySelector("#trunk");
+    var myStartBTN = document.querySelector("#start");
+    var myBackBTN = document.querySelector("#back");
+    var myWorkflowBTN = document.querySelector("#workflow");
+    var myWorkflow = document.querySelector("#workflowscreen");
+    var myResetBTN = document.querySelector("#reset");
+    
+    var size = 40;
+    myBlue.addEventListener("click", growTrunk, false);
+    function growTrunk(){
+        size =+ size+20;
+        myTree.style.height = size + "%";  }
+    myStartBTN.addEventListener("click", gotoGarden, false);
+    function gotoGarden(){
+        myInfo.style.display = "none";
+        myGarden.style.display ="block";
+        myWorkflow.style.display = "none";
+         myBackBTN.style.display = "block";
+    }
+    
+      myBackBTN.addEventListener("click", goBack, false);
+    function goBack(){
+        myInfo.style.display = "block";
+        myGarden.style.display ="none";
+        myWorkflow.style.display ="none";
+        myBackBTN.style.display = "none";
+    }
+    myWorkflowBTN.addEventListener("click", gotoWorkflow, false);
+    function gotoWorkflow(){
+        myInfo.style.display = "none";
+        myGarden.style.display ="none";
+        myWorkflow.style.display = "block";
+        myBackBTN.style.display = "block";
+    }
+    myResetBTN.addEventListener("click", resetTrunk, false);
+    function resetTrunk(){location.reload();
+        
+    }
+    
+    
+    
+    
+    
+    </script>
+    </body>    
+    
+</html>
