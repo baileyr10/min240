@@ -1,0 +1,206 @@
+!doctype html>
+<html>
+<style>
+    
+    #homescreen{ height:600px;
+        width: 600px;
+        background-color: palegreen;
+        
+    }
+    #title{color:slategray;
+        font-size: 45px;
+        font-style: bold;
+        text-align: center
+    }
+    
+    #world{
+        position: absolute;
+        top: 200px;
+        left: 200px;
+      
+      
+        animation: 5s spin linear infinite;
+    }
+    #jamaica{
+        position: relative;
+        height: 45px; 
+        width: 115px;
+        font-size:28px;
+        background-color: green;
+        color: gold;
+        text-align: center;
+        border-radius: 20%;
+        top: 45px;
+        left: 25px;
+    }
+    #china{
+        position: relative;
+        height: 45px; 
+        width: 115px;
+        font-size:30px;
+        background-color: red;
+        color: gold;
+        text-align: center;
+        border-radius: 20%;
+        top:0px;
+        left: 450px;
+    }
+    #africa{
+        position: relative;
+        height: 45px; 
+        width: 115px;
+        font-size:30px;
+        background-color: darkgreen;
+        color: silver;
+        text-align: center;
+        border-radius: 20%;
+        left: 380px;
+        top: 345px;
+        
+    }
+    #hawaii{
+        position: relative;
+        height: 45px; 
+        width: 115px;
+        font-size:30px;
+        background-color: lightskyblue;
+        color: sandybrown;
+        text-align: center;
+        border-radius: 20%;
+        left:100px;
+        top: 300px;
+    }
+    #jamaicainfo{
+        display: none;
+        height: 600px;
+        width: 600px;
+        background-color:whitesmoke;}
+    #hawaiiinfo{
+        display: none;
+        height: 600px;
+        width: 600px;
+        background-color:lightskyblue;
+        
+    }
+    #chinainfo{
+        display: none;
+        height: 600px;
+        width: 600px;
+        background-color: lightpink;
+        
+    }
+    #africainfo{
+        display: none;
+        height: 600px;
+        width: 600px;
+        background-color:rosybrown;
+        
+    }
+    
+    #jamaicainfo>img{
+        width: 100%;
+        
+    }
+    #chinainfo>img{
+        width: 100%;
+        
+    }
+    #hawaiiinfo>img{
+        width: 100%;
+        
+    }
+    #africainfo>img{
+        width: 100%;
+        
+    }
+        
+
+    #homebutton{
+        position: relative;
+        height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: darkred;
+        color:silver;
+        border-radius: 20%;
+        bottom: 65px;
+        left: 18%;
+    }
+    
+     @keyframes spin{from{
+        transform-origin: center;
+        transform: rotate(360deg);}
+       
+    }
+</style>
+
+<body>
+  <div id= homescreen>
+      <div id=title>Global Music</div>
+    <div id=jamaica>Jamaican</div>
+       <div id=china>Chinese</div>
+      
+    <div id=africa>African</div>
+    <div id=hawaii>Hawaiian</div>
+      <div id=world><img src="./world.png"></div>
+    </div>
+ <div id=jamaicainfo> <img src="./jamaica.png"> <audio src="./jamaicamusic.mp3" id="JamaicanPlayer"></audio>  </div>
+    <div id=chinainfo> <img src="./china.png"> <audio src="./chinamusic.mp3" id="ChinesePlayer"></audio>  </div>
+    <div id=hawaiiinfo> <img src="./hawaii.png"> <audio src="./hawaiimusic.mp3" id="HawaiianPlayer"></audio>  </div>
+    <div id=africainfo> <img src="./africa.png"> <audio src="./africamusic.mp4" id="AfricanPlayer"></audio>  </div>
+    <div id=homebutton>Home</div>
+    
+<script>
+var myHome = document.querySelector("#homescreen");    
+var myHomeButton = document.querySelector("#homebutton");
+    myHomeButton.addEventListener("click", GoHome, false)
+var myJamica = document.querySelector("#jamaica");
+    myJamica.addEventListener("click", JamaicaMusic, false);
+    var myChina = document.querySelector("#china");
+    myChina.addEventListener("click", ChinaMusic, false);
+     var myHawaii = document.querySelector("#hawaii");
+    myHawaii.addEventListener("click", HawaiiMusic, false);
+     var myAfrica = document.querySelector("#africa");
+    myAfrica.addEventListener("click", AfricaMusic, false);
+    function GoHome(){
+        location.reload();
+    }
+    var JamaicaPlayer = document.querySelector("#JamaicanPlayer");
+    var JamaicaInfo = document.querySelector("#jamaicainfo");
+    var ChinaPlayer = document.querySelector("#ChinesePlayer");
+    var ChinaInfo = document.querySelector("#chinainfo");
+    var HawaiiPlayer = document.querySelector("#HawaiianPlayer");
+    var HawaiiInfo = document.querySelector("#hawaiiinfo");
+    var AfricaPlayer = document.querySelector("#AfricanPlayer");
+    var AfricaInfo = document.querySelector("#africainfo");
+    function JamaicaMusic(){
+        JamaicaInfo.style.display = "block";
+        myHome.style.display = "none";
+        JamaicaPlayer.play();
+    }
+    function ChinaMusic(){
+        ChinaInfo.style.display = "block";
+        myHome.style.display = "none";
+        ChinaPlayer.play();
+    }
+    
+    function AfricaMusic(){
+        AfricaInfo.style.display = "block";
+        myHome.style.display = "none";
+        AfricaPlayer.play();
+    }
+    function HawaiiMusic(){
+        HawaiiInfo.style.display = "block";
+        myHome.style.display = "none";
+        HawaiiPlayer.play();
+    }
+    
+</script>    
+</body>
+
+
+
+
+
+</html>
