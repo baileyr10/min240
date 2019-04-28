@@ -1,186 +1,323 @@
 <!doctype html>
 <html>
-<style>
     
-    #home{ display: block;
-    position: relative;
-       height:80vh;
-        width: 80vw;
-        background-color: palegreen;
-        
-    }
-    body{ height: 80vh;
-        width: 80vw;
-        margin-right: 50vw;
-    #title{
-    }
-    
-       }
-    #music{
-        position: absolute;
-        height:60px; 
-        width: 120px;
-        font-size:35px;
-        background-color: darkred;
-        color: white;
-        text-align: center;
-        border-radius: 20%;
-        top: 55px;
-        left: 90px;
-    }
+<head></head>
+<style>    
     
     
-    #musicvideo{ position: absolute;
-    }
-        
-    #video{
-        position: relative;
-        height: 45px; 
-        width: 115px;
-        font-size:30px;
-        background-color: darkred;
-        color: white;
-        text-align: center;
-        border-radius: 20%;
-        top:0px;
-        left: 450px;
-    }
-    #history{
-        position: relative;
-        height: 45px; 
-        width: 115px;
-        font-size:30px;
-        background-color: darkgreen;
-        color: silver;
-        text-align: center;
-        border-radius: 20%;
-        left: 380px;
-        top: 345px;
-        
-    }
-    #movie{
-        position: relative;
-        height: 45px; 
-        width: 115px;
-        font-size:30px;
-        background-color: lightskyblue;
-        color: sandybrown;
-        text-align: center;
-        border-radius: 20%;
-        left:100px;
-        top: 300px;
-    }
-    #musicpage{
-        position:relative;
-        display: none;
-        height: 80vh;
-        width: 80vw;
-        background-color:whitesmoke;}
-    #moviepage{
-        display: none;
-        height: 80vw;
-        width: 80vw;
-        background-color:lightskyblue;
-        
-    }
-    #historypage{
-        display: none;
-        height: 80vh;
-        width: 80vw;
-        background-color: lightpink;
-        
-    }
-    #africainfo{
-        display: none;
-        height: 80vh;
-        width: 80vw;
-        background-color:rosybrown;
-        
-    }
-    
-    
-
-    #homebutton{
-        position: relative;
-        height: 45px;
+    #start{position: absolute;
+    height: 45px;
         width: 115px;
         font-size: 30px;
         text-align: center;
-        background-color: darkred;
-        color:silver;
+        background-color: gray;
+        color: white;
         border-radius: 20%;
-        bottom: 65px;
-        left: 18%;
+        top: 75%;
+        left: 15%;
     }
-    
-     
-</style>
 
-<body>
-  <div id= home>
-      <div id=title></div>
-    <div id=music>Music</div>
-       <div id>Chinese</div>
-      
-    <div id=history>History</div>
-    <div id=video>Video</div>
-      
-    </div>
- <div id=musicpage></div>
-    <div id=chinainfo> </div>
-    <div id=hawaiiinfo> <img src="./hawaii.png"> <audio src="./hawaiimusic.mp3" id="HawaiianPlayer"></audio>  </div>
-    <div id=africainfo> <img src="./africa.png"> <audio src="./africamusic.mp4" id="AfricanPlayer"></audio>  </div>
-    <div id=homebutton>Home</div>
-    
-<script>
-var myHome = document.querySelector("#home");    
-var myHomeButton = document.querySelector("#homebutton");
-    myHomeButton.addEventListener("click", GoHome, false)
-var myMusic = document.querySelector("#music");
-    myMusic.addEventListener("click", MusicPage, false);
-    var myChina = document.querySelector("#china");
-    myChina.addEventListener("click", ChinaMusic, false);
-     var myHawaii = document.querySelector("#hawaii");
-    myHawaii.addEventListener("click", HawaiiMusic, false);
-     var myHistory = document.querySelector("#history");
-    myAfrica.addEventListener("click", AfricaMusic, false);
-    function GoHome(){
-        location.reload();
+    #music{position: relative;
+    height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        top: 75%;
+        left: 15%;}
+
+    #history{position: relative;
+    height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        top: 75%;
+        left: 15%;} 
+   #video{position: relative;
+    height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        top: 0vh;
+        left: 15%;}
+  #game{position: relative;
+      height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        top: 75%;
+        left: 15%;}
+     #back{position: relative;
+    height: 45px;
+        width: 115px;
+        font-size: 30px;
+        text-align: center;
+        background-color: gray;
+        color: white; 
+        border-radius: 20%;
+         top: 5%;
+         display: block;
+        
     }
+    #reset{position: absolute;
+    height: 45px;
+        width: 115px;
+        font-size: 25px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        border-radius: 20%;
+        left:85%;
+        top:5%;
+    }
+        
    
-    var MusicPage = document.querySelector("#musicpage");
-    var ChinaInfo = document.querySelector("#chinainfo");
     
-    var HawaiiInfo = document.querySelector("#hawaiiinfo");
-    
-    var AfricaInfo = document.querySelector("#africainfo");
-    function MusicPage(){
-        MusicPage.style.display = "block";
-        myHome.style.display = "none";
-        
+    #infoscreen{
+        position: relative;
+        background-color:forestgreen;
+        color:white;
+        text-align: center;
+        font-size: 60px;
+        display: block;
+        width: 80vw;
+        height: 80vh;
+            
     }
-    function ChinaMusic(){
-        ChinaInfo.style.display = "block";
-        myHome.style.display = "none";
+            
+            
         
-    }
-    
-    function AfricaMusic(){
-        AfricaInfo.style.display = "block";
-        myHome.style.display = "none";
-        
-    }
-    function HawaiiMusic(){
-        HawaiiInfo.style.display = "block";
-        myHome.style.display = "none";
        
     }
     
-</script>    
-</body>
+ #musicscreen{
+       position: absolute;
+        height: 80vh;
+        width: 80vw;
+        display: none;
+        
+            
+        
+       
+    }
+ #historyscreen{
+       position: absolute;
+        height: 80vh;
+        width: 80vw;
+        display: none;
+       
+    }
+
+
+ #videoscreen{
+       position: absolute;
+        height: 80vh;
+        width: 80vw;
+        display: none;
+        
+            
+        
+       
+    }
+
+
+ #gamescreen{
+       position: absolute;
+        height: 80vh;
+        width: 80vw;
+        display: none;
+        
+            
+        
+       
+    }
+    #garden{position: absolute;
+        background-color:green;
+        height: 30vh;
+            width:80vw;
+        top:78%;
+    }
+    
+    
+    #blue{ position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10vmin;
+        height: 10vmin;
+        background-color: blue;
+        
+    }
+    
+    #trunk{ position: absolute;
+        top: 70%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        width: 10vmin;
+        height: 20vmin;
+        background-color: saddlebrown;
+        
+    }
+   
+    </style>    
+    <body>
+    <div id="infoscreen">
+    <div id="start">Start</div>
+     <div id="music">Music</div>
+     <div id="history">History</div>
+    <div id="video">Videos</div>
+    <div id="game">Games</div>
+    </div>    
+    
+ <div id="musiccreen"> </div>
+<div id="historyscreen"> </div>
+<div id="videoscreen"></div>
+<div id="gamescreen"></div>    
+        
+         <div id="reset">Reset</div>
+    </div>
+    <div id="workflowscreen"></div>
+        <div id="back">Back</div>
+<script>
+    var myInfo = document.querySelector("#infoscreen")
+   
+    var myMusic = document.querySelector("#musicscreen")
+    var myMusicBTN = document.querySelector("#music")
+    
+    var myHistory = document.querySelector("#historyscreen")
+    var myHistoryBTN = document.querySelector("#history")
+
+    var myVideo = document.querySelector("#videoscreen")
+    var myVideoBTN = document.querySelector("#video")
+    
+
+    var myGame = document.querySelector("#gamescreen")
+    var myGameBTN = document.querySelector("#game")
 
 
 
 
 
+    var myGarden = document.querySelector("#gardenscreen")
+    var myBlue = document.querySelector("#blue");
+    var myTree = document.querySelector("#trunk");
+    var myStartBTN = document.querySelector("#start");
+    var myBackBTN = document.querySelector("#back");
+    var myWorkflowBTN = document.querySelector("#workflow");
+    var myWorkflow = document.querySelector("#workflowscreen");
+    var myResetBTN = document.querySelector("#reset");
+    
+           
+    myStartBTN.addEventListener("click", gotoGarden, false);
+    function gotoGarden(){
+        myInfo.style.display = "none";
+        myGarden.style.display ="block";
+        myWorkflow.style.display = "none";
+         myBackBTN.style.display = "block";
+    }
+    
+
+   myMusicBTN.addEventListener("click", gotoMusic, false);
+    function gotoMusic(){
+        myInfo.style.display = "none";
+        myMusic.style.display ="block";
+        myHistory.style.display = "none";
+        myVideo.style.display = "none";
+        myGame.style.display = "none";
+         myBackBTN.style.display = "block";
+         myHistoryBTN.style.display = "none";
+         myGameBTN.style.display = "none";
+         myMusicBTN.style.display = "none";
+         myVideoBTN.style.display = "none";
+        }
+
+
+   myHistoryBTN.addEventListener("click", gotoHistory, false);
+    function gotoHistory(){
+        myInfo.style.display = "none";
+        myMusic.style.display ="none";
+        myHistory.style.display = "block";
+        myVideo.style.display = "none";
+        myGame.style.display = "none";
+         myBackBTN.style.display = "block";
+         myHistoryBTN.style.display = "none";
+         myGameBTN.style.display = "none";
+         myMusicBTN.style.display = "none";
+         myVideoBTN.style.display = "none";
+        }
+
+
+
+
+   myVideoBTN.addEventListener("click", gotoVideo, false);
+    function gotoMusic(){
+        myInfo.style.display = "none";
+        myMusic.style.display ="none";
+        myHistory.style.display = "none";
+        myVideo.style.display = "block";
+        myGame.style.display = "none";
+         myBackBTN.style.display = "block";
+         myHistoryBTN.style.display = "none";
+         myGameBTN.style.display = "none";
+         myMusicBTN.style.display = "none";
+         myVideoBTN.style.display = "none";
+        }
+
+
+
+   myGameBTN.addEventListener("click", gotoGame, false);
+    function gotoMusic(){
+        myInfo.style.display = "none";
+        myMusic.style.display ="none";
+        myHistory.style.display = "none";
+        myVideo.style.display = "none";
+        myGame.style.display = "block";
+         myBackBTN.style.display = "block";
+         myHistoryBTN.style.display = "none";
+         myGameBTN.style.display = "none";
+         myMusicBTN.style.display = "none";
+         myVideoBTN.style.display = "none";
+        }
+
+
+
+      myBackBTN.addEventListener("click", goBack, false);
+    function goBack(){
+        myInfo.style.display = "block";
+        myGarden.style.display ="none";
+        myWorkflow.style.display ="none";
+        myBackBTN.style.display = "none";
+        myHistoryBTN.style.display = "none";
+         myGameBTN.style.display = "none";
+         myMusicBTN.style.display = "none";
+         myVideoBTN.style.display = "none";
+    }
+    myWorkflowBTN.addEventListener("click", gotoWorkflow, false);
+    function gotoWorkflow(){
+        myInfo.style.display = "none";
+        myGarden.style.display ="none";
+        myWorkflow.style.display = "block";
+        myBackBTN.style.display = "block";
+    }
+          
+    
+    
+    
+    
+    
+    
+    </script>
+    </body>    
+    
 </html>
