@@ -17,47 +17,47 @@
         left: 15%;
     }
 
-    #music{position: relative;
+    #music{position: absolute;
     height: 45px;
-        width: 115px;
-        font-size: 30px;
+        width: 145px;
+        font-size: 32px;
         text-align: center;
-        background-color: gray;
+        background-color: darkred;
         color: white;
-        border-radius: 20%;
-        top: 75%;
-        left: 15%;}
+        border-radius: 30%;
+        top: 15vh;
+        left: 12vw;} 
 
-    #history{position: relative;
+    #history{position: absolute;
     height: 45px;
-        width: 115px;
-        font-size: 30px;
+        width: 145px;
+        font-size: 32px;
         text-align: center;
-        background-color: gray;
+        background-color: darkred;
         color: white;
-        border-radius: 20%;
-        top: 75%;
-        left: 15%;} 
-   #video{position: relative;
+        border-radius: 30%;
+        top: 55vh;
+        left: 12vw;} 
+   #video{position: absolute;
     height: 45px;
-        width: 115px;
-        font-size: 30px;
+        width: 145px;
+        font-size: 32px;
         text-align: center;
-        background-color: gray;
+        background-color: darkred;
         color: white;
-        border-radius: 20%;
-        top: 0vh;
-        left: 15%;}
-  #game{position: relative;
+        border-radius: 30%;
+        top: 15vh;
+        left: 55vw;}
+  #game{position: absolute;
       height: 45px;
-        width: 115px;
-        font-size: 30px;
+        width: 145px;
+        font-size: 32px;
         text-align: center;
-        background-color: gray;
+        background-color: darkred;
         color: white;
-        border-radius: 20%;
-        top: 75%;
-        left: 15%;}
+        border-radius: 30%;
+        top: 55vh;
+        left: 55vw;}
      #back{position: relative;
     height: 45px;
         width: 115px;
@@ -142,33 +142,20 @@
         
        
     }
-    #garden{position: absolute;
-        background-color:green;
-        height: 30vh;
-            width:80vw;
-        top:78%;
-    }
+    #elvis{
+     position: absolute;
+      top:18vh;
+      left: 24vw; }
+    #movie{
+     position: absolute;
+      top:18vh;
+      left: 24vw; }
+    #pong{
+     position: absolute;
+      top:18vh;
+      left: 24vw; }
     
     
-    #blue{ position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 10vmin;
-        height: 10vmin;
-        background-color: blue;
-        
-    }
-    
-    #trunk{ position: absolute;
-        top: 70%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        width: 10vmin;
-        height: 20vmin;
-        background-color: saddlebrown;
-        
-    }
    
     </style>    
     <body>
@@ -180,10 +167,22 @@
     <div id="game">Games</div>
     </div>    
     
- <div id="musiccreen"> </div>
+ <div id="musiccreen">
+<div id="elvis"><iframe width="420" height="320"
+src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe>   
+</div> 
+</div>
 <div id="historyscreen"> </div>
-<div id="videoscreen"></div>
-<div id="gamescreen"></div>    
+<div id="videoscreen">
+<div id="movie"><iframe width="420" height="320"
+src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe> 
+</div>
+</div>
+<div id="gamescreen">
+<div id="pong"><iframe width="420" height="320"
+src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe> 
+</div>
+</div>    
         
          <div id="reset">Reset</div>
     </div>
@@ -261,7 +260,7 @@
 
 
    myVideoBTN.addEventListener("click", gotoVideo, false);
-    function gotoMusic(){
+    function gotoVideo(){
         myInfo.style.display = "none";
         myMusic.style.display ="none";
         myHistory.style.display = "none";
@@ -271,13 +270,13 @@
          myHistoryBTN.style.display = "none";
          myGameBTN.style.display = "none";
          myMusicBTN.style.display = "none";
-         myVideoBTN.style.display = "none";
+         myVideoBTN.style.display = "none"; 
         }
 
 
 
    myGameBTN.addEventListener("click", gotoGame, false);
-    function gotoMusic(){
+    function gotoGame(){
         myInfo.style.display = "none";
         myMusic.style.display ="none";
         myHistory.style.display = "none";
@@ -316,7 +315,7 @@
     
     
     
-    
+     
     </script>
     </body>    
     
