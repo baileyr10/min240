@@ -5,18 +5,7 @@
 <style>    
     
     
-    #start{position: absolute;
-    height: 45px;
-        width: 115px;
-        font-size: 30px;
-        text-align: center;
-        background-color: gray;
-        color: white;
-        border-radius: 20%;
-        top: 75%;
-        left: 15%;
-     display:none;}
-
+    
     #music{position: absolute;
     height: 45px;
         width: 145px;
@@ -99,24 +88,23 @@
             
         
        
-    }
+    
     
  #musicscreen{
+        background-color:red;
        position: absolute;
         height: 80vh;
         width: 80vw;
         display: none;
-        
-            
-        
-       
-    }
+text-align: center;
+        padding-top:14vh;}
  #historyscreen{
        position: absolute;
         height: 80vh;
         width: 80vw;
         display: none;
-       
+       background-color:red;
+       background-repeat: no-repeat;
     }
 
 
@@ -142,22 +130,7 @@
         
        
     }
-    #elvis{
-     position: absolute;
-      top:18vh;
-      left: 24vw; 
-      display:none;}
-    #movie{
-     position: absolute;
-      top:18vh;
-      left: 24vw;
-      display:none; }
-    #pong{
-     position: absolute;
-      top:18vh;
-      left: 24vw; 
-            display:none;}
-    
+        
     
    
     </style>    
@@ -170,25 +143,24 @@
     <div id="game">Games</div>
     </div>    
     
- <div id="musiccreen">
-<div id="elvis"><iframe width="420" height="320"
-src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe>   
-</div> 
+ <div id="musicscreen">
+<iframe width="480" height="380"
+src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe>    
+
 </div>
 <div id="historyscreen"> </div>
 <div id="videoscreen">
-<div id="movie"><iframe width="420" height="320"
+<iframe width="420" height="320" 
 src="https://www.youtube.com/embed/bILE5BEyhdo?controls=0"></iframe> 
 </div>
-</div>
-<div id="gamescreen">
-<div id="pong"><iframe width="420" height="320"
+<div id="gamescreen"> 
+<iframe width="420" height="320"
 src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe> 
-</div>
+
 </div>    
         <div id="back">Back</div>
         
-    </div>
+    
     
         
 <script>
@@ -206,11 +178,8 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
 
     var myGame = document.querySelector("#gamescreen");
     var myGameBTN = document.querySelector("#game");
-    
-    var myElvis = document.querySelector("#elvis");
-    var myMovie = document.querySelector("#movie");
-    var myPong = document.quesrySelector("#pong");
-
+  
+    var myElivs = document.querySelector("#elvis");
 
 
    
@@ -250,9 +219,7 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myGameBTN.style.display = "none";
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
-          myElvis.style.display = "none";
-         myPong.style.display = "none";
-         myMovie.style.display = "none";      
+              
         }
 
 
@@ -300,13 +267,15 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
       myBackBTN.addEventListener("click", goBack, false);
     function goBack(){
         myInfo.style.display = "block";
-        myGarden.style.display ="none";
-        myWorkflow.style.display ="none";
         myBackBTN.style.display = "none";
-        myHistoryBTN.style.display = "none";
-         myGameBTN.style.display = "none";
-         myMusicBTN.style.display = "none";
-         myVideoBTN.style.display = "none";
+        myHistory.style.display = "none";
+         myGame.style.display = "none";
+         myMusic.style.display = "none";
+         myVideo.style.display = "none";
+        myHistoryBTN.style.display = "block";
+         myGameBTN.style.display = "block";
+         myMusicBTN.style.display = "block";
+         myVideoBTN.style.display = "block";
     }
    
     
