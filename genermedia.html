@@ -15,7 +15,7 @@
         border-radius: 20%;
         top: 75%;
         left: 15%;
-    }
+     display:none;}
 
     #music{position: absolute;
     height: 45px;
@@ -145,15 +145,18 @@
     #elvis{
      position: absolute;
       top:18vh;
-      left: 24vw; }
+      left: 24vw; 
+      display:none;}
     #movie{
      position: absolute;
       top:18vh;
-      left: 24vw; }
+      left: 24vw;
+      display:none; }
     #pong{
      position: absolute;
       top:18vh;
-      left: 24vw; }
+      left: 24vw; 
+            display:none;}
     
     
    
@@ -175,7 +178,7 @@ src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe>
 <div id="historyscreen"> </div>
 <div id="videoscreen">
 <div id="movie"><iframe width="420" height="320"
-src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe> 
+src="https://www.youtube.com/embed/bILE5BEyhdo?controls=0"></iframe> 
 </div>
 </div>
 <div id="gamescreen">
@@ -183,48 +186,38 @@ src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe>
 src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe> 
 </div>
 </div>    
-        
-         <div id="reset">Reset</div>
-    </div>
-    <div id="workflowscreen"></div>
         <div id="back">Back</div>
+        
+    </div>
+    
+        
 <script>
-    var myInfo = document.querySelector("#infoscreen")
+    var myInfo = document.querySelector("#infoscreen");
    
-    var myMusic = document.querySelector("#musicscreen")
-    var myMusicBTN = document.querySelector("#music")
+    var myMusic = document.querySelector("#musicscreen");
+    var myMusicBTN = document.querySelector("#music");
     
     var myHistory = document.querySelector("#historyscreen")
-    var myHistoryBTN = document.querySelector("#history")
+    var myHistoryBTN = document.querySelector("#history");
 
-    var myVideo = document.querySelector("#videoscreen")
-    var myVideoBTN = document.querySelector("#video")
+    var myVideo = document.querySelector("#videoscreen");
+    var myVideoBTN = document.querySelector("#video");
     
 
-    var myGame = document.querySelector("#gamescreen")
-    var myGameBTN = document.querySelector("#game")
+    var myGame = document.querySelector("#gamescreen");
+    var myGameBTN = document.querySelector("#game");
+    
+    var myElvis = document.querySelector("#elvis");
+    var myMovie = document.querySelector("#movie");
+    var myPong = document.quesrySelector("#pong");
 
 
 
-
-
-    var myGarden = document.querySelector("#gardenscreen")
-    var myBlue = document.querySelector("#blue");
-    var myTree = document.querySelector("#trunk");
-    var myStartBTN = document.querySelector("#start");
+   
+    
     var myBackBTN = document.querySelector("#back");
-    var myWorkflowBTN = document.querySelector("#workflow");
-    var myWorkflow = document.querySelector("#workflowscreen");
-    var myResetBTN = document.querySelector("#reset");
+   
     
-           
-    myStartBTN.addEventListener("click", gotoGarden, false);
-    function gotoGarden(){
-        myInfo.style.display = "none";
-        myGarden.style.display ="block";
-        myWorkflow.style.display = "none";
-         myBackBTN.style.display = "block";
-    }
     
 
    myMusicBTN.addEventListener("click", gotoMusic, false);
@@ -239,7 +232,10 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myGameBTN.style.display = "none";
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
-        }
+         myElvis.style.display = "block";
+         myPong.style.display = "none";
+         myMovie.style.display = "none";      
+    }
 
 
    myHistoryBTN.addEventListener("click", gotoHistory, false);
@@ -254,6 +250,9 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myGameBTN.style.display = "none";
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
+          myElvis.style.display = "none";
+         myPong.style.display = "none";
+         myMovie.style.display = "none";      
         }
 
 
@@ -271,6 +270,9 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myGameBTN.style.display = "none";
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none"; 
+         myElvis.style.display = "none";
+         myPong.style.display = "none";
+         myMovie.style.display = "block";      
         }
 
 
@@ -287,7 +289,11 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myGameBTN.style.display = "none";
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
-        }
+       myElvis.style.display = "none";
+         myPong.style.display = "block";
+         myMovie.style.display = "none";      
+        
+}
 
 
 
@@ -302,16 +308,7 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
     }
-    myWorkflowBTN.addEventListener("click", gotoWorkflow, false);
-    function gotoWorkflow(){
-        myInfo.style.display = "none";
-        myGarden.style.display ="none";
-        myWorkflow.style.display = "block";
-        myBackBTN.style.display = "block";
-    }
-          
-    
-    
+   
     
     
     
