@@ -16,7 +16,6 @@
         border-radius: 30%;
         top: 15vh;
         left: 12vw;} 
-
     #history{position: absolute;
     height: 45px;
         width: 145px;
@@ -115,16 +114,12 @@ text-align: center;
        background-repeat: no-repeat;
       background-size: 80vw 80vh;
     }
-
-
  #videoscreen{
        position: absolute;
         background-image:url("https://ak6.picdn.net/shutterstock/videos/30029956/thumb/6.jpg");
         background-repeat:no-repeat;
         background-size: 80vw 80vh;
    
-
-
     height: 80vh;
         width: 80vw;
    paddding-top: 14vh;
@@ -135,15 +130,13 @@ text-align: center;
         
        
     }
-
-
  #gamescreen{
        position: absolute;
         background-image:url("http://www.virtualrealityreviewer.com/wp-content/uploads/2014/06/space-invaders-vr.jpg");
         background-repeat:no-repeat;
         background-size: 80vw 80vh;
    
-height: 80vh;
+       height: 80vh;
         width: 80vw;
         display: none;
         padding-top: 14vh;
@@ -164,10 +157,119 @@ height: 80vh;
       top: 15vh;
       }
    
+    #title{ position:absolute;
+     background-image: url("https://cdn.discordapp.com/attachments/565645741217808425/572551831784521761/genermedialogo.png");
+     background-repeat:no-repeat;
+     background-size:50vw 45vh;
+     height: 60vh;
+     width: 60vw;
+     left: 13.5vw;
+     top: 18.2vh;
+     display: block;
+}
+#upload{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572470856001912832/uploadbutton.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+#download{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572470850981462016/downloadbutton.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+     }
+#reccomend{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479103954059264/reccomendation.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+
+#moviemode{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479083930189848/moviebutton.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+
+
+#videomode{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479079530364937/playbutton.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+
+
+#shared{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572470852097146903/plusbutton.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+
+#list{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479084966445103/playlist.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+#gamelibrary{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479102754357258/gamesbutton.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+     }
+#search{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479107791847449/search.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw;
+         top: 70vh;
+         left: 2vw;
+         display: block;
+
     </style>    
     <body>
     <div id="infoscreen">
-    <div id="start">Start</div>
+<div id="title"></div>
+        
+    
      <div id="music">Music</div>
      <div id="history">History</div>
     <div id="video">Videos</div>
@@ -190,8 +292,8 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
 
 </div>    
 <div id="news"></div>
-        <div id="back">Back</div>
-        
+        <div id="back"></div>
+
     
     
         
@@ -203,24 +305,19 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
     
     var myHistory = document.querySelector("#historyscreen")
     var myHistoryBTN = document.querySelector("#history");
-
     var myVideo = document.querySelector("#videoscreen");
     var myVideoBTN = document.querySelector("#video");
     
-
     var myGame = document.querySelector("#gamescreen");
     var myGameBTN = document.querySelector("#game");
   
     var myNews = document.querySelector("#news");
-
-
    
     
     var myBackBTN = document.querySelector("#back");
    
     
     
-
    myMusicBTN.addEventListener("click", gotoMusic, false);
     function gotoMusic(){
         myInfo.style.display = "none";
@@ -235,8 +332,6 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myVideoBTN.style.display = "none";
          myNews.style.display = "none";
     }
-
-
    myHistoryBTN.addEventListener("click", gotoHistory, false);
     function gotoHistory(){
         myInfo.style.display = "none";
@@ -251,10 +346,6 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myVideoBTN.style.display = "none";
          myNews.style.display = "block";
         }
-
-
-
-
    myVideoBTN.addEventListener("click", gotoVideo, false);
     function gotoVideo(){
         myInfo.style.display = "none";
@@ -269,9 +360,6 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myVideoBTN.style.display = "none"; 
            myNews.style.display = "none"; 
         }
-
-
-
    myGameBTN.addEventListener("click", gotoGame, false);
     function gotoGame(){
         myInfo.style.display = "none";
@@ -287,9 +375,6 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
             
         myNews.style.display = "none";
 }
-
-
-
       myBackBTN.addEventListener("click", goBack, false);
     function goBack(){
         myInfo.style.display = "block";
