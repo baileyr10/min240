@@ -188,7 +188,7 @@ text-align: center;
          display: block;
      }
      }
-#reccomend{position: absolute;
+#reccommend{position: absolute;
     background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479103954059264/reccomendation.png"); 
        background-repeat:no-repeat;
        background-size: 90px 90px;
@@ -293,7 +293,15 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
 </div>    
 <div id="news"></div>
         <div id="back"></div>
-
+<div id="upload"></div>
+<div id="download"></div>
+<div id="reccommend"></div>
+<div id="moviemode"></div>
+<div id="videomode"></div>
+<div id="shared"></div>
+<div id="list"></div>
+<div id="gamelibrary"></div>
+<div id="search"></div>
     
     
         
@@ -315,8 +323,18 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
    
     
     var myBackBTN = document.querySelector("#back");
-   
+
+var myUpload = document.querySelector("#upload");
+var myDownload = document.querySelector("#download ");
+var myReccommend = document.querySelector("#reccommend");
+var myMovieMode = document.querySelector("#moviemode");
+var myVideoMode = document.querySelector("#videomode");
+var myShared = document.querySelector("#shared");
+var myList = document.querySelector("#list");
+var myGameLibrary = document.querySelector("#gamelibrary");
+var mySearch = document.querySelector("#search");
     
+     
     
    myMusicBTN.addEventListener("click", gotoMusic, false);
     function gotoMusic(){
@@ -331,6 +349,15 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
          myNews.style.display = "none";
+         myUpload.style.display = "none";
+myDownload.style.display = "none";
+myReccommend.style.display = "none";
+myMovieMode.style.display = "none"; 
+myVideoMode.style.display = "none"; 
+ myShared.style.display = "none";
+myList.style.display = "none"; 
+myGameLibrary.style.display = "none"; 
+mySearch.style.display = "none";
     }
    myHistoryBTN.addEventListener("click", gotoHistory, false);
     function gotoHistory(){
@@ -345,7 +372,17 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
          myNews.style.display = "block";
-        }
+        
+myUpload.style.display = "none";
+myDownload.style.display = "none";
+myReccommend.style.display = "none";
+myMovieMode.style.display = "none"; 
+myVideoMode.style.display = "none"; 
+ myShared.style.display = "none";
+myList.style.display = "none"; 
+myGameLibrary.style.display = "none"; 
+mySearch.style.display = "none";}
+
    myVideoBTN.addEventListener("click", gotoVideo, false);
     function gotoVideo(){
         myInfo.style.display = "none";
@@ -359,7 +396,17 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none"; 
            myNews.style.display = "none"; 
-        }
+        myUpload.style.display = "none";
+myDownload.style.display = "none";
+myReccommend.style.display = "none";
+myMovieMode.style.display = "none"; 
+myVideoMode.style.display = "none"; 
+ myShared.style.display = "none";
+myList.style.display = "none"; 
+myGameLibrary.style.display = "none"; 
+mySearch.style.display = "none";}
+
+
    myGameBTN.addEventListener("click", gotoGame, false);
     function gotoGame(){
         myInfo.style.display = "none";
@@ -374,6 +421,15 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myVideoBTN.style.display = "none";
             
         myNews.style.display = "none";
+myUpload.style.display = "none";
+myDownload.style.display = "none";
+myReccommend.style.display = "none";
+myMovieMode.style.display = "none"; 
+myVideoMode.style.display = "none"; 
+ myShared.style.display = "none";
+myList.style.display = "none"; 
+myGameLibrary.style.display = "none"; 
+mySearch.style.display = "none";
 }
       myBackBTN.addEventListener("click", goBack, false);
     function goBack(){
@@ -388,7 +444,16 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
          myMusicBTN.style.display = "block";
          myVideoBTN.style.display = "block";
          myNews.style.display = "none";
-    }
+ myUpload.style.display = "none";
+myDownload.style.display = "none";
+myReccommend.style.display = "none";
+myMovieMode.style.display = "none"; 
+myVideoMode.style.display = "none"; 
+ myShared.style.display = "none";
+myList.style.display = "none"; 
+myGameLibrary.style.display = "none"; 
+mySearch.style.display = "none";   
+}
    
     
     
