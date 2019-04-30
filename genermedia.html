@@ -173,8 +173,8 @@ text-align: center;
        background-size: 90px 90px;
         height:20vh;
         width: 20vw;
-         top: 70vh;
-         left: 2vw;
+         top: 1vh;
+         left: 73vw;
          display: block;
      }
 #download{position: absolute;
@@ -182,34 +182,36 @@ text-align: center;
        background-repeat:no-repeat;
        background-size: 90px 90px;
         height:20vh;
-        width: 20vw;
-         top: 70vh;
-         left: 2vw;
-         display: block;
+        width: 20vw; 
+         top: 15vh;
+         left: 73vw;
+         display: none;
      }
-     }
-#reccommend{position: absolute;
-    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479103954059264/reccomendation.png"); 
-       background-repeat:no-repeat;
-       background-size: 90px 90px;
-        height:20vh;
-        width: 20vw;
-         top: 70vh;
-         left: 2vw;
-         display: block;
-     }
+     
+
 
 #moviemode{position: absolute;
     background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479083930189848/moviebutton.png"); 
        background-repeat:no-repeat;
        background-size: 90px 90px;
         height:20vh;
-        width: 20vw;
+        width: 20vw; 
          top: 70vh;
-         left: 2vw;
+         left: 25vw;
          display: block;
      }
 
+#rec{position: absolute;
+    background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479103954059264/reccomendation.png"); 
+       background-repeat:no-repeat;
+       background-size: 90px 90px;
+        height:20vh;
+        width: 20vw; 
+         top: 60vh;
+         left: 73vw;
+         display: block;
+     }
+ 
 
 #videomode{position: absolute;
     background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479079530364937/playbutton.png"); 
@@ -218,7 +220,7 @@ text-align: center;
         height:20vh;
         width: 20vw;
          top: 70vh;
-         left: 2vw;
+         left: 45vw;
          display: block;
      }
 
@@ -229,8 +231,8 @@ text-align: center;
        background-size: 90px 90px;
         height:20vh;
         width: 20vw;
-         top: 70vh;
-         left: 2vw;
+         top: 45vh;
+         left: 60vw;
          display: block;
      }
 
@@ -240,8 +242,8 @@ text-align: center;
        background-size: 90px 90px;
         height:20vh;
         width: 20vw;
-         top: 70vh;
-         left: 2vw;
+         top: 15vh;
+         left: 60vw;
          display: block;
      }
 #gamelibrary{position: absolute;
@@ -250,8 +252,8 @@ text-align: center;
        background-size: 90px 90px;
         height:20vh;
         width: 20vw;
-         top: 70vh;
-         left: 2vw;
+         top: 15vh;
+         left: 60vw;
          display: block;
      }
 #search{position: absolute;
@@ -260,9 +262,9 @@ text-align: center;
        background-size: 90px 90px;
         height:20vh;
         width: 20vw;
-         top: 70vh;
-         left: 2vw;
-         display: block;
+         top: 1vh;
+         left: 1vw;
+         display: block;  
 
     </style>    
     <body>
@@ -277,25 +279,25 @@ text-align: center;
     </div>    
     
  <div id="musicscreen">
-<iframe width="480" height="380"
+<iframe width="460" height="360"
 src="https://www.youtube.com/embed/lzQ8GDBA8Is?controls=0"></iframe>    
 
 </div>
 <div id="historyscreen"></div>
 <div id="videoscreen">
-<iframe width="480" height="380" 
+<iframe width="460" height="360" 
 src="https://www.youtube.com/embed/bILE5BEyhdo?controls=0"></iframe> 
 </div>
 <div id="gamescreen"> 
-<iframe width="480" height="380"
+<iframe width="460" height="360"
 src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe> 
 
 </div>    
 <div id="news"></div>
-        <div id="back"></div>
+<div id="back"></div>
 <div id="upload"></div>
 <div id="download"></div>
-<div id="reccommend"></div>
+<div id="rec"></div>
 <div id="moviemode"></div>
 <div id="videomode"></div>
 <div id="shared"></div>
@@ -326,7 +328,7 @@ src="https://www.youtube.com/embed/fiShX2pTz9A?controls=0"></iframe>
 
 var myUpload = document.querySelector("#upload");
 var myDownload = document.querySelector("#download ");
-var myReccommend = document.querySelector("#reccommend");
+var myRec = document.querySelector("#rec");
 var myMovieMode = document.querySelector("#moviemode");
 var myVideoMode = document.querySelector("#videomode");
 var myShared = document.querySelector("#shared");
@@ -337,7 +339,7 @@ var mySearch = document.querySelector("#search");
      
     
    myMusicBTN.addEventListener("click", gotoMusic, false);
-    function gotoMusic(){
+    function gotoMusic(){ 
         myInfo.style.display = "none";
         myMusic.style.display ="block";
         myHistory.style.display = "none";
@@ -349,13 +351,13 @@ var mySearch = document.querySelector("#search");
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none";
          myNews.style.display = "none";
-         myUpload.style.display = "none";
-myDownload.style.display = "none";
-myReccommend.style.display = "none";
-myMovieMode.style.display = "none"; 
+         myUpload.style.display = "block"; 
+myDownload.style.display = "block"; 
+myReccommend.style.display = "block";
+myMovieMode.style.display = "none";  
 myVideoMode.style.display = "none"; 
  myShared.style.display = "none";
-myList.style.display = "none"; 
+myList.style.display = "none";  
 myGameLibrary.style.display = "none"; 
 mySearch.style.display = "none";
     }
@@ -373,15 +375,15 @@ mySearch.style.display = "none";
          myVideoBTN.style.display = "none";
          myNews.style.display = "block";
         
-myUpload.style.display = "none";
-myDownload.style.display = "none";
-myReccommend.style.display = "none";
+myUpload.style.display = "block";
+myDownload.style.display = "block";
+myReccommend.style.display = "block";
 myMovieMode.style.display = "none"; 
 myVideoMode.style.display = "none"; 
  myShared.style.display = "none";
-myList.style.display = "none"; 
+myList.style.display = "block"; 
 myGameLibrary.style.display = "none"; 
-mySearch.style.display = "none";}
+mySearch.style.display = "block";}
 
    myVideoBTN.addEventListener("click", gotoVideo, false);
     function gotoVideo(){
@@ -397,12 +399,12 @@ mySearch.style.display = "none";}
          myVideoBTN.style.display = "none"; 
            myNews.style.display = "none"; 
         myUpload.style.display = "none";
-myDownload.style.display = "none";
-myReccommend.style.display = "none";
-myMovieMode.style.display = "none"; 
-myVideoMode.style.display = "none"; 
+myDownload.style.display = "block";
+myReccommend.style.display = "block";
+myMovieMode.style.display = "block"; 
+myVideoMode.style.display = "block"; 
  myShared.style.display = "none";
-myList.style.display = "none"; 
+myList.style.display = "block"; 
 myGameLibrary.style.display = "none"; 
 mySearch.style.display = "none";}
 
@@ -421,15 +423,15 @@ mySearch.style.display = "none";}
          myVideoBTN.style.display = "none";
             
         myNews.style.display = "none";
-myUpload.style.display = "none";
-myDownload.style.display = "none";
-myReccommend.style.display = "none";
+myUpload.style.display = "block";
+myDownload.style.display = "block";
+myReccommend.style.display = "block";
 myMovieMode.style.display = "none"; 
 myVideoMode.style.display = "none"; 
  myShared.style.display = "none";
 myList.style.display = "none"; 
-myGameLibrary.style.display = "none"; 
-mySearch.style.display = "none";
+myGameLibrary.style.display = "block"; 
+mySearch.style.display = "block";
 }
       myBackBTN.addEventListener("click", goBack, false);
     function goBack(){
