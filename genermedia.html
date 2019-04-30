@@ -54,24 +54,12 @@
         width: 20vw;
          top: 70vh;
          left: 2vw;
-         display: block;
+         display: none;
          
     }
    
     
-    #infoscreen{
-        position: absolute;
-        background-image: url(https://www.infomart-usa.com/wp-content/uploads/2017/03/social-media-background-check-tips.jpg);
-        color:white;
-        background-repeat:no-repeat;
-       background-size: 80vw 80vh;
-        text-align: center;
-        font-size: 60px;
-        display: block;
-        width: 80vw;
-        height: 80vh;
-        
-    }
+   
    
     
     #infoscreen{
@@ -175,7 +163,7 @@ text-align: center;
         width: 20vw;
          top: 1vh;
          left: 73vw;
-         display: block;
+         display: none;
      }
 #download{position: absolute;
     background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572470850981462016/downloadbutton.png"); 
@@ -198,7 +186,7 @@ text-align: center;
         width: 20vw; 
          top: 70vh;
          left: 25vw;
-         display: block;
+         display: none;
      }
 
 #rec{position: absolute;
@@ -209,7 +197,7 @@ text-align: center;
         width: 20vw; 
          top: 60vh;
          left: 73vw;
-         display: block;
+         display: none;
      }
  
 
@@ -221,7 +209,7 @@ text-align: center;
         width: 20vw;
          top: 70vh;
          left: 45vw;
-         display: block;
+         display: none;
      }
 
 
@@ -233,7 +221,7 @@ text-align: center;
         width: 20vw;
          top: 45vh;
          left: 60vw;
-         display: block;
+         display: none;
      }
 
 #list{position: absolute;
@@ -244,7 +232,7 @@ text-align: center;
         width: 20vw;
          top: 15vh;
          left: 60vw;
-         display: block;
+         display: none;
      }
 #gamelibrary{position: absolute;
     background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479102754357258/gamesbutton.png"); 
@@ -254,7 +242,7 @@ text-align: center;
         width: 20vw;
          top: 15vh;
          left: 60vw;
-         display: block;
+         display: none;
      }
 #search{position: absolute;
     background-image:url("https://cdn.discordapp.com/attachments/565645741217808425/572479107791847449/search.png"); 
@@ -264,7 +252,7 @@ text-align: center;
         width: 20vw;
          top: 1vh;
          left: 1vw;
-         display: block;  
+         display: none;  
 
     </style>    
     <body>
@@ -353,13 +341,13 @@ var mySearch = document.querySelector("#search");
          myNews.style.display = "none";
          myUpload.style.display = "block"; 
 myDownload.style.display = "block"; 
-myReccommend.style.display = "block";
+myRec.style.display = "block";
 myMovieMode.style.display = "none";  
 myVideoMode.style.display = "none"; 
- myShared.style.display = "none";
-myList.style.display = "none";  
+ myShared.style.display = "block";
+myList.style.display = "block";  
 myGameLibrary.style.display = "none"; 
-mySearch.style.display = "none";
+mySearch.style.display = "block";
     }
    myHistoryBTN.addEventListener("click", gotoHistory, false);
     function gotoHistory(){
@@ -377,7 +365,7 @@ mySearch.style.display = "none";
         
 myUpload.style.display = "block";
 myDownload.style.display = "block";
-myReccommend.style.display = "block";
+myRec.style.display = "block";
 myMovieMode.style.display = "none"; 
 myVideoMode.style.display = "none"; 
  myShared.style.display = "none";
@@ -398,15 +386,15 @@ mySearch.style.display = "block";}
          myMusicBTN.style.display = "none";
          myVideoBTN.style.display = "none"; 
            myNews.style.display = "none"; 
-        myUpload.style.display = "none";
+        myUpload.style.display = "block";
 myDownload.style.display = "block";
-myReccommend.style.display = "block";
+myRec.style.display = "block";
 myMovieMode.style.display = "block"; 
 myVideoMode.style.display = "block"; 
  myShared.style.display = "none";
 myList.style.display = "block"; 
 myGameLibrary.style.display = "none"; 
-mySearch.style.display = "none";}
+mySearch.style.display = "block";}
 
 
    myGameBTN.addEventListener("click", gotoGame, false);
